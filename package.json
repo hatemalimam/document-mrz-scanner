@@ -1,0 +1,61 @@
+{
+  "name": "document-mrz-scanner",
+  "version": "1.0.0",
+  "description": "Detect and extract MRZ (Machine Readable Zone) information from various types of document images, including identity documents, driver's licenses, passports, and more.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js --ext .jsx index.js",
+    "prepush": "yarn run lint",
+    "release-patch": "yarn version --patch",
+    "release-minor": "yarn version --minor",
+    "release-major": "yarn version --major"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatemalimam/document-mrz-scanner.git"
+  },
+  "author": {
+    "name": "Hatem Alimam",
+    "email": "me@hatemalimam.com",
+    "url": "https://github.com/hatemalimam/document-mrz-scanner"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hatemalimam/document-mrz-scanner/issues"
+  },
+  "homepage": "https://github.com/hatemalimam/document-mrz-scanner#readme",
+  "keywords": [
+    "id",
+    "identity document",
+    "driver's licenses",
+    "driver license",
+    "document",
+    "passport",
+    "mrz",
+    "scanner",
+    "ocr",
+    "tesseract",
+    "sharp"
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.2",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn run prepush"
+    }
+  },
+  "dependencies": {
+    "mrz": "^4.0.0",
+    "node-tesseract-ocr": "^2.2.1",
+    "sharp": "^0.32.5"
+  }
+}
